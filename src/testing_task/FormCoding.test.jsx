@@ -30,3 +30,11 @@ test ('test false input', ()=>{
       
 })
 
+describe('Form', ()=>{
+    test('render component', ()=>{
+        render(<FormCoding/>);
+        expect(screen.getByText(/Nama Lengkap:/)).toBeInTheDocument();
+        expect(screen.getByLabelText(/Email/)).toBeInTheDocument();
+        expect(screen.getByLabelText(/No Handphone:/)).toBeInTheDocument();
+    });
+})
